@@ -1,44 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link href="Card.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="./JS/search.js"></script>
+    <title>FAQ</title>
 </head>
-<div class="birthdayCard">
-<div class="cardFront">
-  <div class="front-text">
-  <h3 class="happy">HAPPY</h3>
-  <h2 class="bday">BIRTHDAY</h2> 
-  <h3 class="toyou ">to you Mokaa!</h3>  
-  </div>
-  <div class="wrap-deco">
-<div class="decorations"></div>
-<div class="decorationsTwo"></div>
-  </div> 
-    <div class="wrap-decoTwo">
-<div class="decorations"></div>
-<div class="decorationsThree"></div>
-  </div>
-  <div class="plate">
-    <div class="cake"></div>
-    <div class="flame"></div>
-  </div>
-</div>  
-  <div class="cardInside">
-     <div class="inside-text">
-  <h3 class="happy">HAPPY</h3>
-  <h2 class="bday">BIRTHDAY</h2> 
-  <h3 class="toyou">Mokty</h3>  
-  </div>
-    <div class="wishes">
-    <p>Sweet 18,</p>
-    <p>Happy, happy birthday! 🎉✨ It's hard to believe how time has flown by. It feels like just yesterday that we met, and now we're celebrating almost two years of friendship. It's truly amazing, isn't it?
+<body>
 
-        As I reflect on the moments we've shared, I can't help but feel overwhelmed with gratitude. You have brought so much joy, laughter, and warmth into my life. The memories we've created together are treasures that I hold close to my heart.
-        
-        On this special day, I want nothing more than for you to have an incredible year ahead. May it be filled with boundless happiness, new adventures, and precious moments that we'll create together. Let's make every second count and seize the opportunities that come our way.
-        
-        By the way, I have a little surprise for you. To enhance your birthday experience, I recommend opening something special from your computer. Trust me, it'll make your day even more memorable.
-        
-        Once again, happiest of birthdays, my dear friend. Thank you for being a part of my life and for making every day brighter. I'm truly blessed to have you by my side. Let's make this year the best one yet! .</p>
-    <p class="name"></p>
+    <div class="header">
+        <h1 class="header-title">Frequently Asked Questions</h1>
+        <p class="header-desc">Can't find answer? you can always contact us. We will answer shortly</p>
+
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="search()">Search</button>
+        </div>
     </div>
-  </div>
-</div>
+
+    <div class="faq">
+        <div class="faq-name">
+            <h2 class="faq-header">Table of Contents</h2>
+            <ul class="toc">
+                <li><a href="#places">Places</a></li>
+                <li><a href="#transportation">Transportation</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#history">History</a></li>
+            </ul>
+        </div>
+        <div class="faq-box">
+            <div id="places" class="faq-wrapper">
+                <h3 class="section-title">Places</h3>
+                <div class="faq-item">
+                    <input type="checkbox" id="places-questions" class="faq-trigger">
+                    <label for="places-questions" class="faq-title">Q: What are some popular tourist spots in this place?</label>
+                    <div class="faq-detail">A: Some popular tourist spots include [list popular spots here].</div>
+                </div>
+                <div class="faq-item">
+                    <input type="checkbox" id="places-getting-there" class="faq-trigger">
+                    <label for="places-getting-there" class="faq-title">Q: How can I get to [specific place] from here?</label>
+                    <div class="faq-detail">A: You can [describe transportation options].</div>
+                </div>
+            </div>
+            <div id="transportation" class="faq-wrapper">
+                <h3 class="section-title">Transportation</h3>
+                <div class="faq-item">
+                    <input type="checkbox" id="transportation-options" class="faq-trigger">
+                    <label for="transportation-options" class="faq-title">Q: What are the available transportation options?</label>
+                    <div class="faq-detail">A: The available transportation options include [list transportation options].</div>
+                </div>
+                <div class="faq-item">
+                    <input type="checkbox" id="transportation-cost" class="faq-trigger">
+                    <label for="transportation-cost" class="faq-title">Q: How much does public transportation cost?</label>
+                    <div class="faq-detail">A: Public transportation costs vary depending on the mode of transport and distance.</div>
+                </div>
+            </div>
+            <div id="reservation" class="faq-wrapper">
+                <h3 class="section-title">Reservation</h3>
+                <div class="faq-item">
+                    <input type="checkbox" id="reservation-process" class="faq-trigger">
+                    <label for="reservation-process" class="faq-title">Q: How do I make a reservation?</label>
+                    <div class="faq-detail">A: You can make a reservation by [describe reservation process].</div>
+                </div>
+                <div class="faq-item">
+                    <input type="checkbox" id="reservation-cancel" class="faq-trigger">
+                    <label for="reservation-cancel" class="faq-title">Q: Can I cancel or modify my reservation?</label>
+                    <div class="faq-detail">A: Yes, you can cancel or modify your reservation by [describe cancellation/modification process].</div>
+                </div>
+            </div>
+            <div id="history" class="faq-wrapper">
+                <h3 class="section-title">History</h3>
+                <div class="faq-item">
+                    <input type="checkbox" id="history-description" class="faq-trigger">
+                    <label for="history-description" class="faq-title">Q: What is the history of this place?</label>
+                    <div class="faq-detail">A: [Brief history description].</div>
+                </div>
+                <div class="faq-item">
+                    <input type="checkbox" id="history-landmarks" class="faq-trigger">
+                    <label for="history-landmarks" class="faq-title">Q: Are there any historical landmarks nearby?</label>
+                    <div class="faq-detail">A: Yes, some historical landmarks include [list landmarks].</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
